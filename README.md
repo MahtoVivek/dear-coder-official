@@ -1,79 +1,73 @@
-# 🚀 Dear Coder
+# React + TypeScript + Vite
 
-Welcome to **Dear Coder** — an AI Powered Technology Company.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-We build modern digital solutions including:
+Currently, two official plugins are available:
 
-✅ Website Development  
-✅ Mobile App Development  
-✅ AI Agent Development  
-✅ Automation Systems  
-✅ SaaS Products  
-✅ UI/UX Design  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
----
+## React Compiler
 
-## 🌐 Live Website
-👉 https://dearcoder.in/
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🧠 About Dear Coder
+## Expanding the ESLint configuration
 
-Dear Coder is a modern tech startup focused on building intelligent applications and AI-powered solutions for startups, businesses, and creators.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Our mission is to transform ideas into scalable technology.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
----
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-## ⚙️ Tech Stack
-
-- Next.js
-- React
-- Tailwind CSS
-- Vercel Hosting
-- AI Integrations
-
----
-
-## ✨ Features
-
-- Modern Responsive Design
-- Fast Performance
-- Startup Ready UI
-- AI Friendly Architecture
-
----
-
-## 📦 Installation
-
-```bash
-git clone https://github.com/MahtoVivek/dearcoder.in.git
-cd dearcoder.in
-npm install
-npm run dev
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## 🤝 Contributing
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-We welcome developers and innovators.
-
-Feel free to fork and contribute.
-
----
-
-## 📩 Contact
-
-📧 Email: hello@dearcoder.in  
-🌍 Website: www.dearcoder.in
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub.
-
----
-
-© 2026 Dear Coder
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
