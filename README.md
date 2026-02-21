@@ -2,7 +2,86 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Currently, two official plugins are avai# 🚀 Dear Coder
+
+Welcome to **Dear Coder** — an AI Powered Technology Company.
+
+We build modern digital solutions including:
+
+✅ Website Development  
+✅ Mobile App Development  
+✅ AI Agent Development  
+✅ Automation Systems  
+✅ SaaS Products  
+✅ UI/UX Design  
+
+---
+
+## 🌐 Live Website
+👉 https://dearcoder.in
+
+---
+
+## 🧠 About Dear Coder
+
+Dear Coder is a modern tech startup focused on building intelligent applications and AI-powered solutions for startups, businesses, and creators.
+
+Our mission is to transform ideas into scalable technology.
+
+---
+
+## ⚙️ Tech Stack
+
+- Next.js
+- React
+- Tailwind CSS
+- Vercel Hosting
+- AI Integrations
+
+---
+
+## ✨ Features
+
+- Modern Responsive Design
+- Fast Performance
+- Startup Ready UI
+- AI Friendly Architecture
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/MahtoVivek/dear-coder-official.git
+cd dear-coder-official
+npm install
+npm run dev
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome developers and innovators.
+
+Feel free to fork and contribute.
+
+---
+
+## 📩 Contact
+
+📧 Email: hello@dearcoder.in  
+🌍 Website: https://dearcoder.in
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
+
+---
+
+© 2026 Dear Coderlable:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
